@@ -1,0 +1,185 @@
+@import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Caladea:ital@0;1&family=Righteous&display=swap");
+
+body {
+  margin: 0;
+  height: 500%;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  .navbar__logo {
+    font-size: 40px;
+    font-weight: 630;
+    padding: 30 60;
+    img {
+      width: 70px;
+    }
+  }
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-right: 40px;
+    font-size: 20px;
+    li {
+      padding: 8px 12px;
+      margin: 15px;
+      &:hover {
+        background-color: rgba(113, 168, 148, 0.5);
+        border-radius: 4px;
+        padding: 8 12 8 12;
+      }
+    }
+  }
+}
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 30px;
+  font-size: 25px;
+  padding: 5 0;
+}
+
+@media screen and (max-width: 910px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &:active {
+      display: flex;
+    }
+    li {
+      width: 100%;
+      text-align: center;
+    }
+    .navbar__toggleBtn {
+      display: block;
+    }
+  }
+}
+main {
+  width: 100vw;
+  display: flex;
+  .section__left {
+    width: 50%;
+    height: 90%;
+    padding-left: 80px;
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      width: 90%;
+      font-size: 80px;
+      font-weight: 300;
+      font-family: "Righteous", cursive;
+      letter-spacing: 1px;
+      color: #555560;
+      margin: 0;
+    }
+    h2 {
+      width: 77%;
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 0.7px;
+      margin: 30 0;
+    }
+    button {
+      width: 25%;
+      padding: 20;
+      font-size: 16px;
+      color: white;
+      background-color: $pointColor;
+      border-radius: 7px;
+      border: none;
+    }
+  }
+  .section__right {
+    width: 50%;
+    height: 90%;
+    .illust {
+      z-index: 1;
+      position: absolute;
+      right: 0;
+    }
+    .shape {
+      width: 80%;
+    }
+    .stitch {
+      z-index: 1;
+      position: absolute;
+      width: 6%;
+      right: 600;
+      top: 800;
+    }
+  }
+}
+
+article {
+  .article__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+    h1 {
+      font-size: 60px;
+      font-family: "Righteous", cursive;
+      letter-spacing: 1px;
+      color: #555560;
+    }
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin: 5;
+      width: 57%;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.7px;
+    }
+  }
+  .article__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50 70;
+    .card_1,
+    .card_2,
+    .card_3 {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100 25;
+      margin: 0 20;
+      border-radius: 8px;
+      box-shadow: 1px 1px 3px lightgray;
+      img {
+        width: 100px;
+      }
+      h1 {
+        font-size: 25px;
+        margin: 23;
+      }
+      h2 {
+        margin: 0;
+        font-size: 23px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        align-items: center;
+      }
+    }
+  }
+}
