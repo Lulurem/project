@@ -21,7 +21,7 @@ const Button = styled.button`
   height: 100%;
 `;
 
-function Category() {
+function Setting() {
   return (
     <Wrapper>
       <h1>비용 분류 추가</h1>
@@ -33,4 +33,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default Setting;
